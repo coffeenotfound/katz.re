@@ -1,0 +1,342 @@
+@charset "UTF-8";
+html {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.0rem;
+  /** Mobile breakpoints */
+  /** Desktop breakpoints */ }
+  @media only screen and (max-width: 450px) {
+    html {
+      font-size: 0.7rem; } }
+  @media only screen and (min-width: 451px) and (max-width: 960px) {
+    html {
+      font-size: 0.8rem; } }
+  @media only screen and (min-width: 961px) and (max-width: 1300px) {
+    html {
+      font-size: 0.85rem; } }
+  @media only screen and (min-width: 1301px) and (max-width: 2000px) {
+    html {
+      font-size: 0.9rem; } }
+  @media only screen and (min-width: 2001px) {
+    html {
+      font-size: 1rem; } }
+
+body {
+  display: block;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box; }
+
+body {
+  font-size: 1.0rem;
+  font-family: 'Lora', serif;
+  color: #444850; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #323540;
+  font-family: 'Open Sans', sans-serif; }
+
+.wrap {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: 100%; }
+
+.blogpost .wrap {
+  max-width: 700px;
+  padding: 0 1rem; }
+
+.sitecontainer {
+  display: block;
+  /*
+  & > .wrap {
+  	width: 100%;
+  	//max-width: 700px;
+  	
+  	overflow: auto;
+  }
+  */ }
+
+.navbar__item--brand .navbrand__name, .blogpost__content h1 a, .blogpost__content h2 a, .blogpost__content h3 a, .blogpost__content h4 a {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(0deg, rgba(65, 249, 173, 0.5), rgba(65, 249, 173, 0.5));
+  background-size: 100% 0.3em;
+  background-repeat: no-repeat;
+  background-position: 50% 80%; }
+
+.blogpost__content p > a, .blogpost__content figure.blockpicture figcaption a {
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(0deg, rgba(65, 249, 173, 0.5), rgba(65, 249, 173, 0.5));
+  background-size: 100% 0.3em;
+  background-repeat: no-repeat;
+  background-position: 50% 80%; }
+  .blogpost__content p > a:hover, .blogpost__content figure.blockpicture figcaption a:hover {
+    background-image: linear-gradient(0deg, #41f9ad, #41f9ad); }
+
+body {
+  padding-top: 4rem; }
+
+.navbar {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.975);
+  color: #444850;
+  font-size: 0.95rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  z-index: 999; }
+  .navbar > .wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    max-width: 900px;
+    height: 100%; }
+
+.navbar__column {
+  display: flex;
+  height: 100%;
+  flex-flow: row nowrap;
+  align-items: center; }
+  .navbar__column--left {
+    justify-content: flex-start; }
+  .navbar__column--right {
+    justify-content: flex-end; }
+
+.navbar__item {
+  padding: 0.5rem 0.5rem;
+  margin: 0 0.25rem;
+  color: inherit;
+  text-decoration: none;
+  /*
+  &:hover {
+  	text-decoration: underline;
+  }
+  */ }
+
+.navbar__item--logo {
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  background: #444850;
+  border-radius: 50%;
+  transition: background-color 0.05s ease-out; }
+  .navbar__item--logo:hover {
+    background: #41f9ad; }
+
+a.navbar__item:not(.navbar__item--brand) > span {
+  position: relative; }
+  a.navbar__item:not(.navbar__item--brand) > span:after {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: 0%;
+    height: 4px;
+    bottom: -0.1rem;
+    left: 50%;
+    left: 0;
+    z-index: -1;
+    background: #41f9ad;
+    transition: width 0.1s ease-out, left 0.1s ease-out; }
+  a.navbar__item:not(.navbar__item--brand) > span:hover:after {
+    width: 100%; }
+
+.main {
+  width: 100%; }
+  .main > .wrap {
+    width: 100%;
+    padding: 0 1rem;
+    overflow: auto;
+    box-sizing: border-box; }
+
+/*
+.sidebar {
+	width: percentage(3/12);
+	float: right;
+	
+	& > .wrap {
+		width: 100%;
+		padding: 0 1rem;
+		
+		overflow: auto;
+		box-sizing: border-box;
+	}
+}
+*/
+body {
+  padding-bottom: 4rem; }
+
+.footer {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem; }
+  .footer > .wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px; }
+
+.footermessage {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95rem;
+  color: #9199a1; }
+  .footermessage a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #c8ccd0; }
+  .footermessage svg {
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0 0.25rem;
+    vertical-align: middle;
+    stroke: #fd2940;
+    fill: #fd2940; }
+
+.blogpost {
+  display: block;
+  width: 100%; }
+
+.blogpost__metadata {
+  margin-bottom: 1rem; }
+
+.blogpost__header {
+  font-size: 3rem;
+  padding: 0;
+  height: 40rem;
+  background-color: #4a4a4a;
+  background-image: url("/static/images/dark_filter_mask.png"), url("/static/images/workstation-405768_1920.jpg");
+  background-size: auto, cover;
+  background-repeat: repeat, no-repeat;
+  background-position: 50% 50%; }
+  .blogpost__header > .wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; }
+  .blogpost__header h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-align: center; }
+    .blogpost__header h1 span {
+      color: rgba(255, 255, 255, 0.95);
+      font-size: 4rem;
+      font-family: 'Raleway';
+      background-image: linear-gradient(0deg, rgba(65, 249, 173, 0.75), rgba(65, 249, 173, 0.75));
+      background-size: 100% 0.75rem;
+      background-repeat: no-repeat;
+      background-position: 50% 75%; }
+
+.blogpost__content {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  text-align: justify;
+  /*
+  h2 {
+  	background-image: linear-gradient(0deg, $color-accent, $color-accent);
+  	background-size: 100% 5px;
+  	background-repeat: no-repeat;
+  	background-position: 50% 80%;
+  }
+  */ }
+  .blogpost__content > .wrap {
+    padding: 0 1rem; }
+  .blogpost__content h1, .blogpost__content h2, .blogpost__content h3, .blogpost__content h4, .blogpost__content h5, .blogpost__content h6 {
+    line-height: 1.25;
+    margin: 0;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    /* Padding so that the link anchor doesn't scroll beneath the navbar */ }
+    .blogpost__content h1:before, .blogpost__content h2:before, .blogpost__content h3:before, .blogpost__content h4:before, .blogpost__content h5:before, .blogpost__content h6:before {
+      display: block;
+      content: " ";
+      margin-top: -150px;
+      height: 150px;
+      visibility: hidden; }
+  .blogpost__content h2 {
+    font-size: 2rem; }
+  .blogpost__content h3 {
+    font-size: 1.8rem; }
+  .blogpost__content h4 {
+    font-size: 1.6rem; }
+  .blogpost__content h5 {
+    font-size: 1.4rem; }
+  .blogpost__content h6 {
+    font-size: 1.2rem; }
+  .blogpost__content p {
+    margin: 0;
+    margin-bottom: 1.5rem; }
+  .blogpost__content > .wrap > p:first-of-type:first-letter {
+    float: left;
+    margin-right: 0.25rem;
+    margin-top: 0.1rem;
+    line-height: 0.9;
+    font-size: 310%;
+    font-family: 'Chonburi', serif;
+    font-weight: 700; }
+  .blogpost__content blockquote {
+    position: relative;
+    margin: 0.5rem 0;
+    padding: 1rem 4rem;
+    padding-bottom: 1.5rem;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.075);
+    border-radius: 5px;
+    /*
+    q {
+    	quotes: "“" "”" "‘" "’";
+    }
+    q::before {
+    	content: open-quote;
+    }
+    q::after {
+    	content: close-quote;
+    }
+    */ }
+    .blogpost__content blockquote:before {
+      position: absolute;
+      content: '“';
+      top: -1rem;
+      left: 0.75rem;
+      font-size: 6rem;
+      color: inherit; }
+    .blogpost__content blockquote > p:first-of-type:first-letter {
+      float: left;
+      margin-right: 0.25rem;
+      margin-top: 0.1rem;
+      line-height: 0.9;
+      font-size: 310%;
+      font-family: 'Chonburi', serif;
+      font-weight: 700; }
+    .blogpost__content blockquote > p:last-of-type {
+      margin-bottom: 0; }
+  .blogpost__content li {
+    margin-bottom: 0.75rem;
+    list-style-type: disc; }
+    .blogpost__content li > ul, .blogpost__content li > ol {
+      margin-top: 0.75rem; }
+  .blogpost__content figure.blockpicture {
+    margin: 2.5rem 0;
+    margin-top: 3rem;
+    padding: 0; }
+    .blogpost__content figure.blockpicture img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: contain;
+      object-position: 50% 50%;
+      border-radius: 3px; }
+    .blogpost__content figure.blockpicture figcaption {
+      text-align: center; }
